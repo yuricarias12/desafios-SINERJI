@@ -16,7 +16,7 @@ describe('Colocando conhecimento em pratica', () => {
         // Em seguida, clico no link de contas após garantir que está visível e tenha o texto Contas
         cy.xpath('//li//div//a[@href="/contas"]').should('be.visible').and('have.text', 'Contas').click();
 
-        cy.xpath('//td/a/i[contains(@title, "Alterar id: 2157010")]').click()
+        cy.xpath('//td/a/i[contains(@title, "Alterar id: 2157014")]').click()
 
         cy.get('[data-test="nome"]').clear().should('have.value', '')
 

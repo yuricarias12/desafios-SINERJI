@@ -38,6 +38,8 @@ describe('Colocando conhecimento em pratica', () => {
 
         cy.xpath('//input[@data-test="envolvido"]').type('Yuri Carias')
 
+        cy.xpath('//select[@data-test="conta"]').select('Conta Vet').should('have.value', 2157014)
+
         cy.xpath('//button[@data-test="status"]').click().should('have.attr', 'title', 'Conta Paga')
 
         cy.xpath('//button[contains(text(), "Salvar")]').click()

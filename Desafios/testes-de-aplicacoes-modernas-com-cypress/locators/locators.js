@@ -29,7 +29,8 @@ const locators = {
     EXTRATO: {
         LINHAS: 'list-group > li',
         //Esse xpath checa o nome e o valor associado a ele
-        XP_BUSCA_ELEMENTO: '//span[contains(., "Despesas")]/following-sibling::small[contains(., "35.000,00")]'
+        FN_XP_BUSCA_ELEMENTO: (desc, value) => `//span[contains(., '${desc}')]/following-sibling::small[contains(., "${value}")]`,
+        FN_XP_DELETAR_ELEMENTO: (desc, value, idButton) => `//span[contains(text(), '${desc}')]/following-sibling::small[contains(., '${value}')]/ancestor::div[contains(@class, 'col-12 col-md-9')]/following-sibling::div[contains(@class, 'col col-md-1')]//i[@class='${idButton}']`
     },
     SALDO: {
         FN_XP_SALDO: nome => `//td[contains(., '${nome}')]/../td[2]`
